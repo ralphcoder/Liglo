@@ -31,532 +31,145 @@ class _Screen1State extends State<Screen1> {
                       fontFamily: 'Oswald',
                     ),
                   ),
-                  CircleAvatar(
-                      backgroundColor: Color(0XFF34384c),
-                      child: Icon(
-                        Icons.local_grocery_store,
-                        color: KGoldFontColor,
-                      )),
+                  Hero(
+                    tag: 'logo',
+                    child: CircleAvatar(
+                        backgroundColor: Color(0XFF34384c),
+                        child: Icon(
+                          Icons.local_grocery_store,
+                          color: KGoldFontColor,
+                        )),
+                  ),
                 ],
               ),
             ),
             Container(
               height: 420,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Container(
-                    height: 370,
-                    width: 230,
-                    margin: EdgeInsets.all(15.0),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFffffff),
-                      borderRadius: BorderRadius.circular(21.0),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.topCenter,
-                          padding:
-                              EdgeInsets.only(top: 21, left: 21, right: 21),
-                          height: 235,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("images/back1.png"),
-                              fit: BoxFit.fitWidth,
+              child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 5,
+                  itemBuilder: (BuildContext context, int index) {
+                    return new GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            animation(
+                                widget: Screen21(),
+                                curve: Curves.fastLinearToSlowEaseIn,
+                                alignment: Alignment.bottomLeft));
+                      },
+                      child: Container(
+                        height: 370,
+                        width: 230,
+                        margin: EdgeInsets.all(15.0),
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(0, 0),
+                              blurRadius: 7,
+                              color: Color(0xFFa39ea2).withOpacity(.74),
                             ),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(21),
-                              topRight: Radius.circular(21),
-                            ),
-                          ),
+                          ],
+                          color: Color(0xFFffffff),
+                          borderRadius: BorderRadius.circular(21.0),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
-                          child: Container(
-                            child: Column(
-                              children: [
-                                SizedBox(height: 5),
-                                Text(
-                                  'GRADY\'S COLD BREW',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Kdakbrowntextcolor,
-                                    fontWeight: FontWeight.w700,
-                                  ),
+                        child: Column(
+                          children: [
+                            Container(
+                              alignment: Alignment.topCenter,
+                              padding:
+                                  EdgeInsets.only(top: 21, left: 21, right: 21),
+                              height: 235,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage("images/back1.png"),
+                                  fit: BoxFit.fitWidth,
                                 ),
-                                SizedBox(height: 5),
-                                RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "COFFEE BEAN BAG ",
-                                        style: TextStyle(
-                                          color: Klightbrowntextcolor,
-                                          letterSpacing: 1,
-                                          fontSize: 14,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: "8 0Z",
-                                        style: TextStyle(
-                                            color: Kdakbrowntextcolor),
-                                      ),
-                                    ],
-                                  ),
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(21),
+                                  topRight: Radius.circular(21),
                                 ),
-                                SizedBox(height: 10),
-                                Text(
-                                  'Grady\'s Cold Brew Baen Bags are a '
-                                  'Brew it Yourself that lets..',
-                                  style: TextStyle(
-                                    fontFamily: 'Orbiton',
-                                    fontWeight: FontWeight.w100,
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.fromLTRB(15, 10, 15, 10),
+                              child: Container(
+                                child: Column(
                                   children: [
+                                    SizedBox(height: 5),
                                     Text(
-                                      '\$13.00',
+                                      'GRADY\'S COLD BREW',
+                                      textAlign: TextAlign.left,
                                       style: TextStyle(
-                                        fontSize: 16.0,
+                                        fontSize: 15.0,
                                         color: Kdakbrowntextcolor,
-                                        fontWeight: FontWeight.w800,
-                                        fontFamily: 'Oswald',
+                                        fontWeight: FontWeight.w700,
                                       ),
                                     ),
-                                    CircleAvatar(
-                                      backgroundColor: Color(0XFFFE9870),
-                                      child: Icon(
-                                        Icons.add_to_queue,
-                                        color: Color(0XFF914426),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 370,
-                    width: 230,
-                    margin: EdgeInsets.all(15.0),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFffffff),
-                      borderRadius: BorderRadius.circular(21.0),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.topCenter,
-                          padding:
-                              EdgeInsets.only(top: 21, left: 21, right: 21),
-                          height: 235,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("images/back1.png"),
-                              fit: BoxFit.fitWidth,
-                            ),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(21),
-                              topRight: Radius.circular(21),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
-                          child: Container(
-                            child: Column(
-                              children: [
-                                SizedBox(height: 5),
-                                Text(
-                                  'GRADY\'S COLD BREW',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Kdakbrowntextcolor,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "COFFEE BEAN BAG ",
-                                        style: TextStyle(
-                                          color: Klightbrowntextcolor,
-                                          letterSpacing: 1,
-                                          fontSize: 14,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: "8 0Z",
-                                        style: TextStyle(
-                                            color: Kdakbrowntextcolor),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  'Grady\'s Cold Brew Baen Bags are a '
-                                  'Brew it Yourself that lets..',
-                                  style: TextStyle(
-                                    fontFamily: 'Orbiton',
-                                    fontWeight: FontWeight.w100,
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      '\$13.00',
-                                      style: TextStyle(
-                                        fontSize: 16.0,
-                                        color: Kdakbrowntextcolor,
-                                        fontWeight: FontWeight.w800,
-                                        fontFamily: 'Oswald',
+                                    SizedBox(height: 5),
+                                    RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: "COFFEE BEAN BAG ",
+                                            style: TextStyle(
+                                              color: Klightbrowntextcolor,
+                                              letterSpacing: 1,
+                                              fontSize: 14,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: "8 0Z",
+                                            style: TextStyle(
+                                                color: Kdakbrowntextcolor),
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                    CircleAvatar(
-                                      backgroundColor: Color(0XFFFE9870),
-                                      child: Icon(
-                                        Icons.add_to_queue,
-                                        color: Color(0XFF914426),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 370,
-                    width: 230,
-                    margin: EdgeInsets.all(15.0),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFffffff),
-                      borderRadius: BorderRadius.circular(21.0),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.topCenter,
-                          padding:
-                              EdgeInsets.only(top: 21, left: 21, right: 21),
-                          height: 235,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("images/back1.png"),
-                              fit: BoxFit.fitWidth,
-                            ),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(21),
-                              topRight: Radius.circular(21),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
-                          child: Container(
-                            child: Column(
-                              children: [
-                                SizedBox(height: 5),
-                                Text(
-                                  'GRADY\'S COLD BREW',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Kdakbrowntextcolor,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "COFFEE BEAN BAG ",
-                                        style: TextStyle(
-                                          color: Klightbrowntextcolor,
-                                          letterSpacing: 1,
-                                          fontSize: 14,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: "8 0Z",
-                                        style: TextStyle(
-                                            color: Kdakbrowntextcolor),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  'Grady\'s Cold Brew Baen Bags are a '
-                                  'Brew it Yourself that lets..',
-                                  style: TextStyle(
-                                    fontFamily: 'Orbiton',
-                                    fontWeight: FontWeight.w100,
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
+                                    SizedBox(height: 10),
                                     Text(
-                                      '\$13.00',
+                                      'Grady\'s Cold Brew Baen Bags are a '
+                                      'Brew it Yourself that lets..',
                                       style: TextStyle(
-                                        fontSize: 16.0,
-                                        color: Kdakbrowntextcolor,
-                                        fontWeight: FontWeight.w800,
-                                        fontFamily: 'Oswald',
+                                        fontFamily: 'Orbiton',
+                                        fontWeight: FontWeight.w100,
+                                        color: Colors.black,
+                                        fontSize: 13,
                                       ),
                                     ),
-                                    CircleAvatar(
-                                      backgroundColor: Color(0XFFFE9870),
-                                      child: Icon(
-                                        Icons.add_to_queue,
-                                        color: Color(0XFF914426),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 370,
-                    width: 230,
-                    margin: EdgeInsets.all(15.0),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFffffff),
-                      borderRadius: BorderRadius.circular(21.0),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.topCenter,
-                          padding:
-                              EdgeInsets.only(top: 21, left: 21, right: 21),
-                          height: 235,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("images/back1.png"),
-                              fit: BoxFit.fitWidth,
-                            ),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(21),
-                              topRight: Radius.circular(21),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
-                          child: Container(
-                            child: Column(
-                              children: [
-                                SizedBox(height: 5),
-                                Text(
-                                  'GRADY\'S COLD BREW',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Kdakbrowntextcolor,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "COFFEE BEAN BAG ",
-                                        style: TextStyle(
-                                          color: Klightbrowntextcolor,
-                                          letterSpacing: 1,
-                                          fontSize: 14,
+                                    SizedBox(height: 5),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          '\$13.00',
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            color: Kdakbrowntextcolor,
+                                            fontWeight: FontWeight.w800,
+                                            fontFamily: 'Oswald',
+                                          ),
                                         ),
-                                      ),
-                                      TextSpan(
-                                        text: "8 0Z",
-                                        style: TextStyle(
-                                            color: Kdakbrowntextcolor),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  'Grady\'s Cold Brew Baen Bags are a '
-                                  'Brew it Yourself that lets..',
-                                  style: TextStyle(
-                                    fontFamily: 'Orbiton',
-                                    fontWeight: FontWeight.w100,
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      '\$13.00',
-                                      style: TextStyle(
-                                        fontSize: 16.0,
-                                        color: Kdakbrowntextcolor,
-                                        fontWeight: FontWeight.w800,
-                                        fontFamily: 'Oswald',
-                                      ),
+                                        CircleAvatar(
+                                          backgroundColor: Color(0XFFFE9870),
+                                          child: Icon(
+                                            Icons.add_to_queue,
+                                            color: Color(0XFF914426),
+                                          ),
+                                        )
+                                      ],
                                     ),
-                                    CircleAvatar(
-                                      backgroundColor: Color(0XFFFE9870),
-                                      child: Icon(
-                                        Icons.add_to_queue,
-                                        color: Color(0XFF914426),
-                                      ),
-                                    )
                                   ],
                                 ),
-                              ],
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 370,
-                    width: 230,
-                    margin: EdgeInsets.all(15.0),
-                    decoration: BoxDecoration(
-                      color: Color(0xFFffffff),
-                      borderRadius: BorderRadius.circular(21.0),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.topCenter,
-                          padding:
-                              EdgeInsets.only(top: 21, left: 21, right: 21),
-                          height: 235,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("images/back1.png"),
-                              fit: BoxFit.fitWidth,
-                            ),
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(21),
-                              topRight: Radius.circular(21),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
-                          child: Container(
-                            child: Column(
-                              children: [
-                                SizedBox(height: 5),
-                                Text(
-                                  'GRADY\'S COLD BREW',
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 15.0,
-                                    color: Kdakbrowntextcolor,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "COFFEE BEAN BAG ",
-                                        style: TextStyle(
-                                          color: Klightbrowntextcolor,
-                                          letterSpacing: 1,
-                                          fontSize: 14,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: "8 0Z",
-                                        style: TextStyle(
-                                            color: Kdakbrowntextcolor),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  'Grady\'s Cold Brew Baen Bags are a '
-                                  'Brew it Yourself that lets..',
-                                  style: TextStyle(
-                                    fontFamily: 'Orbiton',
-                                    fontWeight: FontWeight.w100,
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      '\$13.00',
-                                      style: TextStyle(
-                                        fontSize: 16.0,
-                                        color: Kdakbrowntextcolor,
-                                        fontWeight: FontWeight.w800,
-                                        fontFamily: 'Oswald',
-                                      ),
-                                    ),
-                                    CircleAvatar(
-                                      backgroundColor: Color(0XFFFE9870),
-                                      child: Icon(
-                                        Icons.add_to_queue,
-                                        color: Color(0XFF914426),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+                      ),
+                    );
+                  }),
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 30),
@@ -584,19 +197,17 @@ class _Screen1State extends State<Screen1> {
           ],
         ),
         bottomNavigationBar: ConvexAppBar(
-          backgroundColor: Color(0XFF24293F),
-          activeColor: Color(0XFFFE9870),
-          height: 55,
-          color: KGoldFontColor,
-          items: [
-            TabItem(icon: Icons.home, title: 'Home'),
-            TabItem(icon: Icons.map, title: 'Discovery'),
-            TabItem(icon: Icons.message, title: 'Message'),
-            TabItem(icon: Icons.people, title: 'Profile'),
-          ],
-          initialActiveIndex: 2, //optional, default as 0
-          onTap: (int i) => Navigator.push(context,
-              animation(widget: Screen21(), curve: Curves.easeOutExpo)),
-        ));
+            backgroundColor: Color(0XFF24293F),
+            activeColor: Color(0XFFFE9870),
+            height: 55,
+            color: KGoldFontColor,
+            items: [
+              TabItem(icon: Icons.home, title: 'Home'),
+              TabItem(icon: Icons.map, title: 'Discovery'),
+              TabItem(icon: Icons.message, title: 'Message'),
+              TabItem(icon: Icons.people, title: 'Profile'),
+            ],
+            initialActiveIndex: 2, //optional, default as 0
+            onTap: (int i) => print("you have pressed bottom bar")));
   }
 }

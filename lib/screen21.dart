@@ -12,13 +12,21 @@ class Screen21 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 60, 40, 20),
-                child: CircleAvatar(
-                    backgroundColor: Color(0XFF34384c),
-                    child: Icon(
-                      Icons.arrow_back,
-                      color: KGoldFontColor,
-                    )),
+                padding: const EdgeInsets.fromLTRB(5, 60, 10, 20),
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Hero(
+                    tag: 'logo',
+                    child: CircleAvatar(
+                        backgroundColor: Color(0XFF34384c),
+                        child: Icon(
+                          Icons.arrow_back,
+                          color: KGoldFontColor,
+                        )),
+                  ),
+                ),
               ),
               Expanded(
                 child: Container(

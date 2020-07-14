@@ -61,8 +61,12 @@ class MyHomePage extends StatelessWidget {
                 text: "Start ",
                 fontSize: 20,
                 press: () {
-                  Navigator.push(context,
-                      animation(widget: Screen1(), curve: Curves.easeOutExpo));
+                  Navigator.push(
+                      context,
+                      animation(
+                          widget: Screen1(),
+                          curve: Curves.fastOutSlowIn,
+                          alignment: Alignment.bottomCenter));
                 },
               ),
             ),

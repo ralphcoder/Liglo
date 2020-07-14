@@ -3,8 +3,9 @@ import 'package:flutter/cupertino.dart';
 class animation extends PageRouteBuilder {
   final Widget widget;
   final curve;
+  final alignment;
 
-  animation({this.widget, this.curve})
+  animation({this.widget, this.curve, this.alignment})
       : super(
           transitionsBuilder: (BuildContext context,
               Animation<double> animation,
@@ -12,7 +13,7 @@ class animation extends PageRouteBuilder {
               Widget child) {
             animation = CurvedAnimation(parent: animation, curve: curve);
             return ScaleTransition(
-              alignment: Alignment.bottomCenter,
+              alignment: alignment,
               scale: animation,
               child: child,
             );
