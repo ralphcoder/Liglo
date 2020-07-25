@@ -27,13 +27,17 @@ class RoundedButton extends StatelessWidget {
         padding: EdgeInsets.symmetric(
             vertical: verticalPadding, horizontal: horizontalPadding),
         decoration: BoxDecoration(
-          color: Color(0XFF3c6491),
+          color: Color(0XFF000000),
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0XFF000000), Color(0XFF186e77)]),
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
               offset: Offset(0, 0),
               blurRadius: 50,
-              color: Color(0xFF3c6491).withOpacity(.9),
+              color: Color(0xFF186e77).withOpacity(.9),
             ),
           ],
         ),

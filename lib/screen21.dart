@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 class Screen21 extends StatelessWidget {
+  final int a;
+  Screen21(this.a);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +35,7 @@ class Screen21 extends StatelessWidget {
                   height: 355,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/back1.png"),
+                      image: AssetImage("images/back$a.png"),
                       fit: BoxFit.fitWidth,
                     ),
                     borderRadius: BorderRadius.only(

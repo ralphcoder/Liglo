@@ -47,14 +47,14 @@ class _Screen1State extends State<Screen1> {
               height: 420,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 5,
+                  itemCount: 4,
                   itemBuilder: (BuildContext context, int index) {
                     return new GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             animation(
-                                widget: Screen21(),
+                                widget: Screen21(index),
                                 curve: Curves.fastLinearToSlowEaseIn,
                                 alignment: Alignment.bottomLeft));
                       },
@@ -82,7 +82,7 @@ class _Screen1State extends State<Screen1> {
                               height: 235,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
-                                  image: AssetImage("images/back1.png"),
+                                  image: AssetImage("images/back$index.png"),
                                   fit: BoxFit.fitWidth,
                                 ),
                                 borderRadius: BorderRadius.only(

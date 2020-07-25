@@ -42,7 +42,7 @@ class MyHomePage extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: "Lig",
-                    style: TextStyle(color: Colors.white70, fontSize: 60),
+                    style: TextStyle(color: Color(0XFF186e77), fontSize: 60),
                   ),
                   TextSpan(
                     text: "lo.",
