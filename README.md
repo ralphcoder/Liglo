@@ -1,6 +1,6 @@
 # liglo
 
-A beautiful UI for Store app. 🛒
+A beautiful, woking UI for Store app. 🛒
 
 ![](https://github.com/ralphcoder/Parallel-Inertia/blob/master/readme%20assets/Mock_02_marble_PSD_compressed.jpg)
 
