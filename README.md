@@ -5,7 +5,7 @@ A beautiful UI for Store app. 🛒
 ![](https://github.com/ralphcoder/Parallel-Inertia/blob/master/readme%20assets/Mock_02_marble_PSD_compressed.jpg)
 
 ## Getting Started
-This flutter UI is Build with-
+This flutter UI is Build with -
 - Cool hero animations. 📽
 - Great glow effects on buttons. 💡
 - Box shadow. 🌞
