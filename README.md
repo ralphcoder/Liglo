@@ -11,4 +11,4 @@ This flutter UI is Build with -
 - Box shadow. 🌞
 - I also used some photoshop to make the products's picture bit funcy. 😁
 
-<img align="left" width="310" height="550" src="https://github.com/ralphcoder/Liglo/blob/master/ezgif.com-optimize.gif">
+<img align="left" width="309" height="550" src="https://github.com/ralphcoder/Liglo/blob/master/ezgif.com-optimize.gif">
