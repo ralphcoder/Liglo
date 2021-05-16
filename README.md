@@ -8,7 +8,7 @@ A beautiful UI for Store app. 🛒
 This flutter UI is Build with -
 - Cool hero animations. 📽
 - Great glow effects on buttons. 💡
-- Box shadow. 🌞
+- Box shadows. 🌞
 - I have also used some photoshop to make the products's picture bit funky.😁
 
 <img align="left" width="309" height="550" src="https://github.com/ralphcoder/Liglo/blob/master/ezgif.com-optimize.gif">
