@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class animation extends PageRouteBuilder {
-  final Widget widget;
+  final Widget widget;//returning the widget on which animation will be applied
   final curve;
   final alignment;
 
